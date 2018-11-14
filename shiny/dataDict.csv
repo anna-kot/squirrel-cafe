@@ -1,0 +1,10 @@
+Column,Column name,Variable name,Description
+1,created_date,Day,Date of entry
+2,created_year,Year,Year of entry
+3,created_month,Month,Month of entry
+4,created_weekday,Weekday,Weekday of entry
+5,created_period,Time of day,Time of day of entry
+6,temperature,Temperature (C),Environmental temperature measured in degrees Celsius
+7,temperature_converted,Temperature (F),Environmental temperature converted to degrees Fahrenheit
+8,nut_count,Nut count,Number of nuts consumed
+9,consumption_speed,Nut consumption,"Nut consumption speed calculated in ""Nuts per minute [npm]"""
