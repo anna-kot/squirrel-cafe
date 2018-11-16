@@ -46,10 +46,9 @@ ui <- fluidPage(shinyjs::useShinyjs(), theme = shinytheme("cerulean"),
                     
                     sliderInput("bins",
                                 "Temperature (ºF)",
-                                min = min(data2$temperature_converted),
-                                max = max(data2$temperature_converted),
+                                min = min(data$temperature_converted),
+                                max = max(data$temperature_converted),
                                 value = c(min, max), ticks = T, step = 1, post = 'ºF'),
-                    
                     hr(),
                     
                     h4(strong("Options:")),
@@ -57,7 +56,9 @@ ui <- fluidPage(shinyjs::useShinyjs(), theme = shinytheme("cerulean"),
                     # Show data table
                     checkboxInput(inputId = "show_data",
                                   label = "Show data table",
-                                  value = FALSE)
+                                  value = FALSE),
+                    hr(),
+                    helpText("Last updated: November 14, 2018 by Anna M. Kot")
                   ),
                   
                   mainPanel(
@@ -70,10 +71,10 @@ ui <- fluidPage(shinyjs::useShinyjs(), theme = shinytheme("cerulean"),
                                          h5(textOutput("description"))),
                                 tabPanel(title = "Data", 
                                          br(), 
-                                         div(DT::dataTableOutput(outputId = "dataTable"),style = 'font-size:80%')),
+                                         DT::dataTableOutput(outputId = "dataTable")),
                                 tabPanel(title = "Data Dictionary", 
                                          br(), 
-                                         div(dataTableOutput(outputId = "dataDict"), style = 'font-size:80%')),
+                                         dataTableOutput(outputId = "dataDict")),
                                 tabPanel(title = "ReadMe",
                                          htmlOutput(outputId = 'readme'))
                     )

@@ -30,8 +30,12 @@ server <- function(input, output, session) {
           "and",
           y(),
           "for",
-          nrow(data_selected()),
-          "data points.")
+          format(round(as.numeric(nrow(data_selected())),0), nsmall=0,big.mark=","),
+          "data points where the temperature is between",
+          input$bins[1],
+          "ºF and",
+          input$bins[2],
+          "ºF.")
   })
   
   # Print data table if checked
