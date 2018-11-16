@@ -1,7 +1,7 @@
 # The Squirrel Cafe: Predicting Winter Weather Conditions
 This project showcases the nut consumption of eurasian red squirrels (Sciurus vulgaris) at The Squirrel Cafe in Ahrensburg, Germany.
 
-To use the Shiny app of The Squirrel Cafe, visit my [shinyapps.io]() page.
+To use the Shiny app of The Squirrel Cafe, visit my [shinyapps.io](https://kotanna.shinyapps.io/shiny/) page.
 
 This project was completed by [Anna M. Kot](https://github.com/kotanna) at University of New Hampshire for DATA901: Analytics Applications I (Fall 2018).
 
