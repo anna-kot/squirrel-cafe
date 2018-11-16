@@ -35,10 +35,10 @@ data$temperature_converted <- celsius.to.fahrenheit(data$temperature)
 # the columns needed for analysis and insights
 data <- subset(data, select=c(2,8,9,10,11,6,12,5,7))
 
-# Create a copy of the dataset omitting
-# temperature data points with NA values
+# Create a copy of the dataset and a
+# subset omitting data points with NA values
 data2 <- data
-data2 <- data[!is.na(data$temperature), ]
+data <- na.omit(data)
 
 # Output a cleansed version each data frame to
 # the project folder
